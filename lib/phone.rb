@@ -1,5 +1,6 @@
 class Phone
   @@allphonenumbers = []
+  # @@allphonenumbers is used to store @home_phone,@work_phone,@cell_phone in @@allcontacts (contact.rb)
   attr_reader(:home_phone, :work_phone, :cell_phone)
   @home_phone = ""
   @work_phone = ""

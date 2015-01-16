@@ -6,12 +6,12 @@ require ('./lib/phone')
 require ('./lib/name')
 
 Contact.clear()
-
+# @contacts is used by form.erb ln 7 to generate page created by app.rb ln 25.
 get ('/') do
   @contacts = Contact.all()
   erb(:form)
 end
-
+# Stores input in appropriate classes.
 post ('/submit') do
   new_name=Name.new({:name => params.fetch('name')})
   new_name.save()
@@ -21,7 +21,7 @@ post ('/submit') do
   new_contact.save()
   redirect ('/')
 end
-
+#Displays objects stored in by contact.rb by using methods in name.rb and phone.rb to access them.
 get ('/contact/:name') do
   contact= Contact.find(params.fetch('name'))
   @name = contact.name().name()

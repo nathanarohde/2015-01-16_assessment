@@ -2,7 +2,7 @@ require ('contact')
 require ('rspec')
 
 describe('#name') do
-  it ('Checks to see if class Contact returns a name') do
+  it ('Checks to see if class Contact returns a name.') do
     name_test = Name.new({:name => "Dude"})
     name_test.save()
     phone_test = Phone.new({:home_phone => "1111111111", :work_phone =>"", :cell_phone=>""})
@@ -14,7 +14,7 @@ describe('#name') do
 end
 
 describe('#phone') do
-  it ('Checks to see if class Contact returns a home phone number') do
+  it ('Checks to see if class Contact returns a home phone number.') do
     name_test = Name.new({:name => "Dude"})
     name_test.save()
     phone_test = Phone.new({:home_phone => "1111111111", :work_phone =>"", :cell_phone=>""})
@@ -26,7 +26,7 @@ describe('#phone') do
 end
 
 describe('#phone') do
-  it ('Checks to see if class Contact returns work phone number') do
+  it ('Checks to see if class Contact returns work phone number.') do
     name_test = Name.new ({:name => "Dude"})
     name_test.save()
     phone_test = Phone.new({:home_phone => "1111111111", :work_phone =>"2222222222", :cell_phone=>""})
@@ -38,7 +38,7 @@ describe('#phone') do
 end
 
 describe('#phone') do
-  it ('Checks to see if class Contact returns cell phone number') do
+  it ('Checks to see if class Contact returns cell phone number.') do
     name_test = Name.new ({:name => "Dude"})
     name_test.save()
     phone_test = Phone.new({:home_phone => "1111111111", :work_phone =>"2222222222", :cell_phone=>"3333333333"})
@@ -50,7 +50,7 @@ describe('#phone') do
 end
 
 describe('#find') do
-  it ('Checks class Contact for an instance and returns it if found') do
+  it ('Checks class Contact for an instance of Contact (searching by name) and returns the instance if found.') do
     Contact.clear()
     name_test = Name.new({:name => "Dude"})
     name_test.save()

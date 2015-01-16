@@ -1,5 +1,6 @@
 class Name
   @@allnames=[]
+  # @@allnames is used to store @name in @@allcontacts (contact.rb)
   attr_reader(:name)
 
   define_method(:initialize) do |attributes|

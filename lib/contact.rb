@@ -1,5 +1,6 @@
 class Contact
   @@allcontacts = []
+  # All information used by this program is stored in, and therefore extracted from @@allcontacts.
   attr_reader(:name, :phone)
 
   define_method(:initialize) do |attributes|
