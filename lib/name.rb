@@ -3,15 +3,15 @@ class Name
   attr_reader(:name)
 
   define_method(:initialize) do |attributes|
-  @name = attributes.fetch(:name)
+    @name = attributes.fetch(:name)
   end
 
   define_singleton_method(:all) do
-  @@allnames
+    @@allnames
   end
 
   define_method(:save) do
-  @@allnames.push(self)
+    @@allnames.push(self)
   end
 
 end
