@@ -1,6 +1,11 @@
 <h3>A list of phone contacts:</h3>
 <ul>
-
+  <% @contacts.each() do |contact| %>
+  <% tag = "/contact/" + contact.name().name() %>
+  <li><a href=<%= tag %>>
+    <%= contact.name().name() %>
+    </a> </li>
+  <% end %>
 </ul>
 
 <h3>Enter a contact</h3>
@@ -23,6 +28,7 @@
       <label for='cell_phone'>Contact cell phone</label>
       <input type='text' name='cell_phone' id='cell_phone' class='form-control'>
     </div>
+    <button type="submit" class="btn btn-lg btn-primary">Add this contact</button>
   </form>
 </div>
 

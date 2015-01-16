@@ -39,12 +39,13 @@ end
 
 describe('#find') do
   it ('Checks class Contact for an instance and returns it if found') do
+    Contact.clear()
     name_test = Name.new({:name => "Dude"})
     name_test.save()
     phone_test = Phone.new({:phone => "1111111111"})
     phone_test.save()
     contact_test = Contact.new({:name => name_test, :phone => phone_test})
     contact_test.save()
-    expect(Contact.find("Dude")).to(eq("Dude"))
+    expect(Contact.find("Dude")).to(eq(contact_test))
   end
 end

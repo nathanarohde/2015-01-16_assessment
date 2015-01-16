@@ -5,7 +5,10 @@ require ('./lib/contact')
 require ('./lib/phone')
 require ('./lib/name')
 
+Contact.clear()
+
 get ('/') do
+  @contacts = Contact.all()
   erb(:form)
 end
 

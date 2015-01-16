@@ -23,7 +23,7 @@ class Contact
     found_contact = ""
     @@allcontacts.each() do |contact|
       if contact.name().name() == find_contact
-        found_contact = find_contact
+        found_contact = contact
       end
     end
     found_contact
