@@ -1,11 +1,11 @@
 <h3>A list of phone contacts:</h3>
 
 <!-- Shows the name of a contact and has a link that is used by
-app.rb ln25 (get ('/contact/:name'))  -->
+app.rb ln 26 (get ('/contact/:name'))  -->
 
 <ul>
   <% @contacts.each() do |contact| %>
-    <% tag = "/contact/" + contact.name().name() %>
+    <% tag = "/contact/" + (contact.name().name()) %>
     <li><a href=<%= tag %>>
       <%= contact.name().name() %>
     </a> </li>

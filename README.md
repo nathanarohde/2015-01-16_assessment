@@ -42,5 +42,10 @@ License: GPL v2
 Created by Nathan Rohde
 
 Known Errors:
-*Because the program accepts string inputs and does not conduct any checks any string of characters can be entered in any field.
 *With this in mind it is also possible to enter in phone numbers longer and shorter than the default 10 characters required.
+
+Fixed Errors:
+*Because the program accepts string inputs and does not conduct any checks any string of characters can be entered in any field.
+  FIXED WITH COMMIT 13:Program now only accepts numeric characters for home_phone, work_phone and cell_phone in form.erb
+*If user entered a name with two or more parts seperated by a space website will crash when trying to create a page for that entry.
+  FIXED WITH COMMIT 13:Program now uses gsub for input name.  Replaces " " with "_"
